@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<skb_template
+  skb_bg="@drawable/empty"
+  key_xmargin="0%p"
+  key_ymargin="0%p"
+  balloon_bg="@drawable/key_balloon_bg"
+  popup_bg="@drawable/miniskb_bg"
+  color="@color/label_color"
+  color_highlight="@color/label_color"
+  color_balloon="@color/balloon_color">
+  <!-- Normal key -->
+  <key_type
+    id="0"
+    bg="@drawable/empty"
+    hlbg="@drawable/normal_key_hl_bg"
+    color_highlight="@color/label_color_hl0"/>
+
+  <!-- Function key -->
+  <key_type
+    id="1"
+    bg="@drawable/empty"
+    hlbg="@drawable/normal_key_hl_bg"/>
+
+  <!-- Light key, light is off -->
+  <key_type
+    id="2"
+    bg="@drawable/empty"
+    hlbg="@drawable/light_key_hl_bg"/>
+
+  <!-- Light key, light is on -->
+  <key_type
+    id="3"
+    bg="@drawable/empty"
+    hlbg="@drawable/light_key_hl_bg"/>
+
+  <!-- key without background-->
+  <key_type
+    id="4"/>
+
+  <!-- Key with normal background but on-key high-light-->
+  <key_type
+    id="5"
+    bg="@drawable/empty"
+    hlbg="@drawable/long_key_hl_bg"
+    color_highlight="@color/label_color_hl0"/>
+
+  <!-- Default icons for enter key -->
+  <key_icon code="66" icon="@drawable/enter_icon"
+    icon_popup="@drawable/enter_popup_icon"/>
+
+  <!-- Default icons for space key -->
+  <key_icon code="62" icon="@drawable/space_icon"
+    icon_popup="@drawable/space_popup_icon"/>
+
+  <!-- Default icons for delete key -->
+  <key_icon code="67" icon="@drawable/delete_popup_icon"
+    icon_popup="@drawable/delete_icon"/>
+
+  <!-- Default key definition -->
+  <!-- Enter key for QWERTY-like keyboards.-->
+  <key id="1" start_pos_x="85.715%p" start_pos_y="75%p"
+    width="15%p" height="25%p" code="66" key_type="1" balloon="false">
+    <toggle_state state_id="@string/toggle_enter_go" label="去往" code="66"/>
+    <toggle_state state_id="@string/toggle_enter_search" code="66"
+      icon="@drawable/search_icon" icon_popup="@drawable/search_popup_icon"/>
+    <toggle_state state_id="@string/toggle_enter_send" label="发送" code="66"/>
+    <toggle_state state_id="@string/toggle_enter_next" label="下一个" code="66"/>
+    <toggle_state state_id="@string/toggle_enter_done" code="66"
+        icon="@drawable/down_icon_popup" icon_popup="@drawable/down_icon"/>
+  </key>
+
+  <!-- Enter key for phone keyboard.-->
+  <key id="2" start_pos_x="75%p" start_pos_y="75%p"
+    width="25%p" height="25%p" code="66" key_type="1" balloon="false">
+    <toggle_state state_id="@string/toggle_enter_go" label="去往" code="66"/>
+    <toggle_state state_id="@string/toggle_enter_search" code="66"
+      icon="@drawable/search_icon" icon_popup="@drawable/search_popup_icon"/>
+    <toggle_state state_id="@string/toggle_enter_send" label="发送" code="66"/>
+    <toggle_state state_id="@string/toggle_enter_next" label="下一个" code="66"/>
+    <toggle_state state_id="@string/toggle_enter_done" label="\25BC" code="66"/>
+  </key>
+
+  <!-- Delete key.-->
+  <key id="3" start_pos_x="85.715%p" start_pos_y="50%p"
+      width="14.286%p" height="25%p" code="67" key_type="1"
+      repeat="true"/>
+
+  <!-- Symbol-switching key (off-mode).-->
+  <key id="4" code="-3" start_pos_x="14.286%p" start_pos_y="75%p"
+      width="10.205%p" height="25%p" key_type="2" label=".?123"/>
+
+  <!-- Symbol-switching key (on-mode).-->
+  <key id="5" code="-3" start_pos_x="14.286%p" start_pos_y="75%p"
+      width="10.205%p" height="25%p" key_type="3" label=".?123"/>
+
+  <!-- Language-switching key. -->
+  <key id="6" start_pos_x="0%p" start_pos_y="75%p"
+      width="14.286%p" height="25%p" code="-2" label="中" key_type="1"
+      repeat="true">
+      <toggle_state state_id="@string/toggle_en_lower" label="Eng" code="-2"/>
+      <toggle_state state_id="@string/toggle_en_upper" label="Eng" code="-2"/>
+  </key>
+
+  <!-- Period key(English mode). -->
+  <key
+      id="7"
+      code="66"
+      start_pos_x="65.304%p"
+      start_pos_y="75%p"
+      width="20.410%p"
+      height="25%p"
+      label="OK"
+      key_type="0"
+      balloon="false"/>
+<!--      icon="@drawable/period_icon" icon_popup="@drawable/period_popup_icon"-->
+
+  <!--  list for key id QWERTYUIOP -->
+  <key id="8" code="45" start_pos_x="1.5%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="Q"/>
+  <key id="9" code="51" start_pos_x="11.25%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="W"/>
+  <key id="10" code="33" start_pos_x="21%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="E"/>
+  <key id="11" code="46" start_pos_x="30.75%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="R"/>
+  <key id="12" code="48" start_pos_x="40.75%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="T"/>
+  <key id="13" code="53" start_pos_x="50.75%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="Y"/>
+  <key id="14" code="49" start_pos_x="60.75%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="U"/>
+  <key id="15" code="37" start_pos_x="70.5%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="I"/>
+  <key id="16" code="43" start_pos_x="80.25%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="O"/>
+  <key id="17" code="44" start_pos_x="90.25%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="P"/>
+
+  <!--  list for key id ASDFGHJ -->
+  <key id="18" code="29" start_pos_x="6.25%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="A"/>
+  <key id="19" code="47" start_pos_x="16.25%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="S"/>
+  <key id="20" code="32" start_pos_x="26%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="D"/>
+  <key id="21" code="34" start_pos_x="35.75%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="F"/>
+  <key id="22" code="35" start_pos_x="45.5%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="G"/>
+  <key id="23" code="36" start_pos_x="55.5%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="H"/>
+  <key id="24" code="38" start_pos_x="65.5%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="J"/>
+  <key id="25" code="39" start_pos_x="75.25%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="K"/>
+  <key id="26" code="40" start_pos_x="85.25%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="L"/>
+
+  <!--  list for key id SHIFT ZXCVBNM -->
+  <key id="27" balloon="false" code="29" start_pos_x="1.5%p" start_pos_y="52.5%p"
+      width="9.25%p" height="19.5%p" icon="@drawable/empty"
+      icon_popup="@drawable/empty">
+    <toggle_state state_id="@string/toggle_smiley" code="-6"
+        icon="@drawable/smiley_icon" icon_popup="@drawable/smiley_popup_icon"
+        key_type="2"/>
+    <toggle_state state_id="@string/toggle_en_lower" code="-1"
+        icon="@drawable/shift_off_icon" key_type="2"/>
+    <toggle_state state_id="@string/toggle_en_upper" code="-1"
+        icon="@drawable/shift_on_icon" key_type="3"/>
+    <toggle_state state_id="@string/toggle_cn_cand" label=""
+        key_type="1"/>
+  </key>
+  <key id="28" code="54" start_pos_x="16.25%p" start_pos_y="52.5%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="Z"/>
+  <key id="29" code="52" start_pos_x="26%p" start_pos_y="52.5%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="X"/>
+  <key id="30" code="31" start_pos_x="35.75%p" start_pos_y="52.5%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="C"/>
+  <key id="31" code="50" start_pos_x="45.5%p" start_pos_y="52.5%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="V"/>
+  <key id="32" code="30" start_pos_x="55.5%p" start_pos_y="52.5%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="B"/>
+  <key id="33" code="42" start_pos_x="65.5%p" start_pos_y="52.5%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="N"/>
+  <key id="34" code="41" start_pos_x="75.25%p" start_pos_y="52.5%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="M"/>
+  <key id="35" start_pos_x="90.25%p" start_pos_y="52.5%p"
+      width="8.75%p" height="19.5%p" code="67" key_type="1"
+      repeat="true"/>
+
+  <key id="36" start_pos_x="1.5%p" start_pos_y="75.9%p"
+      width="13.5%p" height="19.5%p" code="-2" label="中" key_type="1"
+      repeat="true">
+    <toggle_state state_id="@string/toggle_en_lower" label="Eng" code="-2"/>
+    <toggle_state state_id="@string/toggle_en_upper" label="Eng" code="-2"/>
+  </key>
+  <key id="37" code="-3" start_pos_x="16.25%p" start_pos_y="75.9%p"
+      width="8.75%p" height="19.5%p" key_type="0" label=".?123"/>
+  <key id="38" balloon="false" code="62" key_type="5"
+      start_pos_x="26%p" start_pos_y="75.9%p"
+      width="38.25%p" height="19.5%p"/>
+  <key id="39" code="66" start_pos_x="65.5%p" start_pos_y="75.9%p"
+      width="18.5%p" height="19.5%p" label="OK" key_type="0"
+      balloon="false"/>
+  <key id="40" code="66" start_pos_x="85.25%p" start_pos_y="75.9%p"
+      width="13.5%p" height="19.5%p" key_type="1" balloon="false"
+      icon="@drawable/enter_icon" icon_popup="@drawable/enter_popup_icon">
+    <toggle_state state_id="@string/toggle_enter_go" label="去往" code="66"/>
+    <toggle_state state_id="@string/toggle_enter_search" code="66"
+        icon="@drawable/search_icon" icon_popup="@drawable/search_popup_icon"/>
+    <toggle_state state_id="@string/toggle_enter_send" label="发送" code="66"/>
+    <toggle_state state_id="@string/toggle_enter_next" label="下一个" code="66"/>
+    <toggle_state state_id="@string/toggle_enter_done" code="66"
+        icon="@drawable/down_icon_popup" icon_popup="@drawable/down_icon"/>
+  </key>
+
+  <!--  list for key id 1234567890 -->
+  <key id="41" code="8" start_pos_x="1.5%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="1"/>
+  <key id="42" code="9" start_pos_x="11.25%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="2"/>
+  <key id="43" code="10" start_pos_x="21%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="3"/>
+  <key id="44" code="11" start_pos_x="30.75%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="4"/>
+  <key id="45" code="12" start_pos_x="40.75%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="5"/>
+  <key id="46" code="13" start_pos_x="50.75%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="6"/>
+  <key id="47" code="14" start_pos_x="60.75%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="7"/>
+  <key id="48" code="15" start_pos_x="70.5%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="8"/>
+  <key id="49" code="16" start_pos_x="80.25%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="9"/>
+  <key id="50" code="7" start_pos_x="90.25%p" start_pos_y="5.1%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="0"/>
+
+
+  <!--  list for key id -+:;()~*"  -->
+  <key id="51" start_pos_x="6.25%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="-"/>
+  <key id="52"  start_pos_x="16.25%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="+"/>
+  <key id="53" start_pos_x="26%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label=":">
+    <toggle_state state_id="@string/toggle_en_sym1" label=":"/>
+  </key>
+  <key id="54" start_pos_x="35.75%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label=";"/>
+  <key id="55"  start_pos_x="45.5%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="("/>
+  <key id="56"  start_pos_x="55.5%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label=")"/>
+  <key id="57" start_pos_x="65.5%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="-">
+    <toggle_state state_id="@string/toggle_en_sym1" label="~"/>
+  </key>>
+  <key id="58"  start_pos_x="75.25%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="*"/>
+  <key id="59" start_pos_x="85.25%p" start_pos_y="29%p"
+      width="8.75%p" height="19.5%p" key_type="0" label='"'/>
+
+  <!--  list for key id @.,·?!&  -->
+  <key id="60" start_pos_x="16.25%p" start_pos_y="52.5%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="@"/>
+  <key id="61" start_pos_x="26%p" start_pos_y="52.5%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="."/>
+  <key id="62" start_pos_x="35.75%p" start_pos_y="52.5%p"
+      width="8.75%p" height="19.5%p" key_type="0" label=","/>
+  <key id="63" start_pos_x="45.5%p" start_pos_y="52.5%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="·"/>
+  <key id="64" start_pos_x="55.5%p" start_pos_y="52.5%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="?"/>
+  <key id="65" start_pos_x="65.5%p" start_pos_y="52.5%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="!"/>
+  <key id="66" start_pos_x="75.25%p" start_pos_y="52.5%p"
+      width="8.75%p" height="19.5%p" key_type="0" label="\u0026"/>
+  <key id="67" start_pos_x="90.25%p" start_pos_y="52.5%p"
+      width="8.75%p" height="19.5%p" code="67" key_type="1"
+      repeat="true"/>
+
+
+  <key id="68" code="-3" start_pos_x="16.25%p" start_pos_y="75.9%p"
+      width="8.75%p" height="19.5%p" key_type="3" label="\u21B5"/>
+  <key id="69" balloon="false" code="62" key_type="5"
+      start_pos_x="26%p" start_pos_y="75.9%p"
+      width="38.25%p" height="19.5%p"/>
+  <key id="70" code="66" start_pos_x="65.5%p" start_pos_y="75.9%p"
+      width="18.5%p" height="19.5%p" label="OK" key_type="0"
+      balloon="false"/>
+  <key id="71" code="66" start_pos_x="85.25%p" start_pos_y="75.9%p"
+      width="13.5%p" height="19.5%p" key_type="1" balloon="false"
+      icon="@drawable/enter_icon" icon_popup="@drawable/enter_popup_icon">
+    <toggle_state state_id="@string/toggle_enter_go" label="去往" code="66"/>
+    <toggle_state state_id="@string/toggle_enter_search" code="66"
+        icon="@drawable/search_icon" icon_popup="@drawable/search_popup_icon"/>
+    <toggle_state state_id="@string/toggle_enter_send" label="发送" code="66"/>
+    <toggle_state state_id="@string/toggle_enter_next" label="下一个" code="66"/>
+    <toggle_state state_id="@string/toggle_enter_done" code="66"
+        icon="@drawable/down_icon_popup" icon_popup="@drawable/down_icon"/>
+  </key>
+
+
+
+</skb_template>
+

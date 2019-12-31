@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<keyboard
+  skb_template="@xml/skb_template1"
+  skb_cache_flag="true"
+  width="8.75%p"
+  height="19.5%p"
+  key_type="0"
+  repeat="false"
+  balloon="true">
+
+  <row>
+<!--    <keys splitter="|" labels="1|2|3|4|5|6|7|8|9|0"-->
+<!--      codes="8|9|10|11|12|13|14|15|16|7"/>-->
+      <key id="41"/>
+      <key id="42"/>
+      <key id="43"/>
+      <key id="44"/>
+      <key id="45"/>
+      <key id="46"/>
+      <key id="47"/>
+      <key id="48"/>
+      <key id="49"/>
+      <key id="50"/>
+  </row>
+
+  <row start_pos_x="5%p">
+<!--    <keys splitter="|" labels="\-|+"/>-->
+<!--    <key label=":">-->
+<!--      <toggle_state state_id="@string/toggle_en_sym1" label=":"/>-->
+<!--    </key>-->
+<!--    <keys splitter="|" labels=";|(|)"/>-->
+<!--    <key label="—">-->
+<!--      <toggle_state state_id="@string/toggle_en_sym1" label="~"/>-->
+<!--    </key>-->
+<!--&lt;!&ndash;    <key label="、" icon="@drawable/dun_icon"&ndash;&gt;-->
+<!--&lt;!&ndash;      icon_popup="@drawable/dun_popup_icon">&ndash;&gt;-->
+<!--&lt;!&ndash;      <toggle_state state_id="@string/toggle_en_sym1" label="/"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </key>&ndash;&gt;-->
+<!--    <keys splitter="|" labels="*|&quot;"/>-->
+      <key id="51"/>
+      <key id="52"/>
+      <key id="53"/>
+      <key id="54"/>
+      <key id="55"/>
+      <key id="56"/>
+      <key id="57"/>
+      <key id="58"/>
+      <key id="59"/>
+  </row>
+
+  <row start_pos_x="14.696%p" width="10.205%p">
+<!--    <key code="-5" width="14.286%p" key_type="2" label="ALT"/>-->
+<!--    <key label="@">-->
+<!--      <toggle_state state_id="@string/toggle_en_sym1" label="@"/>-->
+<!--    </key>-->
+<!--    <key label=".">-->
+<!--      <toggle_state state_id="@string/toggle_en_sym1" label="."/>-->
+<!--    </key>-->
+<!--    <key label=",">-->
+<!--      <toggle_state state_id="@string/toggle_en_sym1" label=","/>-->
+<!--    </key>-->
+<!--    <key label="·">-->
+<!--      <toggle_state state_id="@string/toggle_en_sym1" label="·"/>-->
+<!--    </key>-->
+<!--    <key label="?">-->
+<!--      <toggle_state state_id="@string/toggle_en_sym1" label="?"/>-->
+<!--    </key>-->
+<!--    <key label="!">-->
+<!--      <toggle_state state_id="@string/toggle_en_sym1" label="!"/>-->
+<!--    </key>-->
+<!--    <key label="\u0026">-->
+<!--      <toggle_state state_id="@string/toggle_en_sym1" label="\u0026"/>-->
+<!--    </key>-->
+<!--    <key id="3"/>-->
+      <key id="60"/>
+      <key id="61"/>
+      <key id="62"/>
+      <key id="63"/>
+      <key id="64"/>
+      <key id="65"/>
+      <key id="66"/>
+      <key id="67"/>
+  </row>
+
+  <row start_pos_x="14.696%p"  key_type="1">
+<!--&lt;!&ndash;    <key code="-2" label="中 符" width="20%p" repeat="true">  width="14.696%p"&ndash;&gt;-->
+<!--&lt;!&ndash;      <toggle_state state_id="@string/toggle_en_sym1" label="英 符" code="-2"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </key>&ndash;&gt;-->
+<!--    <key code="-3" key_type="3" label="\u21B5"/>-->
+<!--    <key balloon="false" code="62" key_type="5" width="40.608%p"/>-->
+<!--    <key code="66" width="20.410%p" label="OK" key_type="0" balloon="false" >-->
+<!--      <toggle_state state_id="@string/toggle_en_sym1" label="OK" />-->
+<!--        &lt;!&ndash;-->
+<!--        icon="@drawable/period_icon" icon_popup="@drawable/period_popup_icon"-->
+<!--        &ndash;&gt;-->
+<!--&lt;!&ndash;      <toggle_state state_id="@string/toggle_en_upper" label="."&ndash;&gt;-->
+<!--&lt;!&ndash;        icon="@drawable/period_icon" icon_popup="@drawable/period_popup_icon"/>&ndash;&gt;-->
+<!--    </key>-->
+<!--    <key id="1"/>-->
+      <key id="68"/>
+      <key id="69"/>
+      <key id="70"/>
+      <key id="71"/>
+  </row>
+</keyboard>
+

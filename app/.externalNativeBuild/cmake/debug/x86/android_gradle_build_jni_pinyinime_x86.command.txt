@@ -1,0 +1,8 @@
+Executable : C:\Users\ppyin\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\cmake.exe
+arguments : 
+--build
+D:\study\PinyinIME-master\app\.externalNativeBuild\cmake\debug\x86
+--target
+jni_pinyinime
+jvmArgs : 
+

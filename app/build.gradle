@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 19
+
+    aaptOptions {
+        noCompress 'dat'
+    }
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 19
+        applicationId "com.android.inputmethod.pinyin"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-Wall"
+            }
+        }
+    }
+
+    signingConfigs {
+        key {
+            keyAlias 'platform'
+            keyPassword 'android'
+            storeFile file('../telechips-a6-android-platform.keystore')
+            storePassword 'android'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            signingConfig signingConfigs.key
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path 'src/main/cpp/CMakeLists.txt'
+        }
+    }
+}
+
+dependencies {
+}

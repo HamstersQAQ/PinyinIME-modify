@@ -1,0 +1,4 @@
+D:/study/PinyinIME-master/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/jni_pinyinime.dir
+D:/study/PinyinIME-master/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/engine.dir
+D:/study/PinyinIME-master/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/edit_cache.dir
+D:/study/PinyinIME-master/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/rebuild_cache.dir
